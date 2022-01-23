@@ -1,0 +1,27 @@
+.t-accordion-input {
+    display: none;
+}
+.t-accordion-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.t-accordion-content {
+    max-height: 0;
+    padding: 0 0.5rem;
+    transition: all 0.35s;
+}
+.t-accordion-input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    &:checked {
+        // + .t-accordion-label {}
+        ~ .t-accordion-content {
+            max-height: 100vh;
+            padding: 0.5rem 0.5rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.125);
+        }
+    }
+}

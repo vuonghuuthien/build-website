@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --bg-header: #ffffff;
+  --border: #ededed;
+  --color-1: #4cc9f0;
+  --color-2: #4895ef;
+  --color-3: #4361ee;
+  --color-4: #3f37c9;
+  --color-5: #3a0ca3;
+  --color-6: #480ca8;
+  --color-7: #560bad;
+  --color-8: #7209b7;
+  --color-9: #b5179e;
+  --color-10: #f72585;
+  --filter-color-1: invert(66%) sepia(12%) saturate(1775%) hue-rotate(148deg)
+    brightness(101%) contrast(108%);
+  --filter-color-3: invert(33%) sepia(39%) saturate(3095%) hue-rotate(216deg)
+    brightness(95%) contrast(96%);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Raleway", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+p {
+  margin: 0;
+}

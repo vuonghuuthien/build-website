@@ -1,0 +1,26 @@
+.layout {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    .header {
+
+    }
+
+    .body {
+        flex-grow: 1;
+        display: flex;
+        .side-bar {
+
+        }
+
+        .body-outlet {
+            flex-grow: 1;
+        }
+    }
+
+    .footer {
+
+    }
+}

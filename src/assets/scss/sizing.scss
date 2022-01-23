@@ -1,0 +1,14 @@
+@for $i from 0 through 20 {
+    .w-#{$i * 5} {width: #{$i * 5 + '%'};}
+    .h-#{$i * 5} {height: #{$i * 5 + '%'};}
+    .miw-#{$i * 5} {min-width: #{$i * 5 + '%'};}
+    .mih-#{$i * 5} {min-height: #{$i * 5 + '%'};}
+    .mw-#{$i * 5} {max-width: #{$i * 5 + '%'};}
+    .mh-#{$i * 5} {max-height: #{$i * 5 + '%'};}
+    .min-vw-#{$i * 5} {min-width: #{$i * 5 + 'vw'};}
+    .min-vh-#{$i * 5} {min-height: #{$i * 5 + 'vh'};}
+    .max-vw-#{$i * 5} {max-width: #{$i * 5 + 'vw'};}
+    .max-vh-#{$i * 5} {max-height: #{$i * 5 + 'vh'};}
+    .w-fit-content {width: fit-content;}
+    .h-fit-content {height: fit-content;}
+}

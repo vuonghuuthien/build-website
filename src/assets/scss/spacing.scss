@@ -1,0 +1,33 @@
+$val: 0;
+$i: 0;
+@while $i <= 20 {
+  // do stuff
+  .t-p-#{$i} {padding: #{$val + 'rem'};}
+  .t-pt-#{$i} {padding-top: #{$val + 'rem'};}
+  .t-pr-#{$i} {padding-right: #{$val + 'rem'};}
+  .t-pb-#{$i} {padding-bottom: #{$val + 'rem'};}
+  .t-pl-#{$i} {padding-left: #{$val + 'rem'};}
+  .t-px-#{$i} {
+    padding-left: #{$val + 'rem'};
+    padding-right: #{$val + 'rem'};
+  }
+  .t-py-#{$i} {
+    padding-top: #{$val + 'rem'};
+    padding-bottom: #{$val + 'rem'};
+  }
+  .t-m-#{$i} {margin: #{$val + 'rem'};}
+  .t-mt-#{$i} {margin-top: #{$val + 'rem'};}
+  .t-mr-#{$i} {margin-right: #{$val + 'rem'};}
+  .t-mb-#{$i} {margin-bottom: #{$val + 'rem'};}
+  .t-ml-#{$i} {margin-left: #{$val + 'rem'};}
+  .t-mx-#{$i} {
+    margin-left: #{$val + 'rem'};
+    margin-right: #{$val + 'rem'};
+  }
+  .t-my-#{$i} {
+    margin-top: #{$val + 'rem'};
+    margin-bottom: #{$val + 'rem'};
+  }
+  $i: $i + 1;
+  $val: $val + 0.125;
+}

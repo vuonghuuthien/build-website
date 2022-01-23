@@ -1,0 +1,22 @@
+@media only screen and (min-width: 576px) {
+    .container {}
+}
+@media only screen and (min-width: 768px) {
+    .container {}
+}
+@media only screen and (min-width: 992px) {
+    .container {}
+}
+@media only screen and (min-width: 1200px) {
+    .container {}
+}
+@media only screen and (min-width: 1440px) {
+    .container {
+        max-width: 1380px !important;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .container {
+        max-width: 1560px !important;
+    }
+}

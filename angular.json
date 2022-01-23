@@ -34,8 +34,23 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/scss/border.scss", 
+              "src/assets/scss/color.scss", 
+              "src/assets/scss/comments-box.scss", 
+              "src/assets/scss/container.scss", 
+              "src/assets/scss/content-filters.scss", 
+              "src/assets/scss/cursor.scss", 
+              "src/assets/scss/font.scss", 
+              "src/assets/scss/object-fit.scss", 
+              "src/assets/scss/search-box.scss", 
+              "src/assets/scss/shadow.scss", 
+              "src/assets/scss/sizing.scss", 
+              "src/assets/scss/spacing.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/assets/scss"]
+            },
             "scripts": []
           },
           "configurations": {
@@ -102,8 +117,23 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/scss/border.scss", 
+              "src/assets/scss/color.scss", 
+              "src/assets/scss/comments-box.scss", 
+              "src/assets/scss/container.scss", 
+              "src/assets/scss/content-filters.scss", 
+              "src/assets/scss/cursor.scss", 
+              "src/assets/scss/font.scss", 
+              "src/assets/scss/object-fit.scss", 
+              "src/assets/scss/search-box.scss", 
+              "src/assets/scss/shadow.scss", 
+              "src/assets/scss/sizing.scss", 
+              "src/assets/scss/spacing.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/assets/scss"]
+            },
             "scripts": []
           }
         }

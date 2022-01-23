@@ -1,0 +1,121 @@
+@import "screens";
+
+.menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border);
+  padding: 0 20px;
+
+  .menu-left {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      perspective: 300px;
+      cursor: pointer;
+      overflow: hidden;
+
+      img {
+        height: 25px;
+        object-fit: contain;
+        transition: 300ms;
+      }
+
+      .logo-name {
+        padding-left: 5px;
+        display: flex;
+        font-family: "OpenSans", sans-serif;
+        font-weight: bold;
+        color: #4cc9f0;
+        background: -webkit-linear-gradient(0deg, #4361ee, #4cc9f0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        max-width: 0;
+        transition: 500ms ease 200ms;
+        position: relative;
+
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          background: linear-gradient(90deg, #7209b7, #f72585);
+        }
+
+        &::before {
+          bottom: 0;
+        }
+      }
+
+      img:hover {
+        -webkit-transform: rotate3d(0, 1, 0, 45deg); /* Chrome, Safari, Opera */
+        transform: rotate3d(0, 1, 0, 45deg); /* Standard syntax */
+
+        & + .logo-name {
+          max-width: 100px;
+        }
+      }
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      .action {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        cursor: pointer;
+
+        img {
+          height: 15px;
+          width: 15px;
+          object-fit: contain;
+          filter: invert(98%) sepia(7%) saturate(78%) hue-rotate(212deg)
+            brightness(115%) contrast(83%);
+        }
+
+        .title {
+          font-size: 11px;
+          color: #cacaca;
+          padding-left: 5px;
+        }
+
+        &:hover {
+          img {
+            filter: var(--filter-color-3);
+          }
+
+          .title {
+            color: #4361ee;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-center {
+    display: flex;
+    align-items: center;
+
+    .page-name {
+      margin-right: 10px;
+    }
+
+    .page-name-edit {
+      cursor: pointer;
+
+      img {
+        height: 13px;
+        width: 13px;
+        object-fit: contain;
+        filter: var(--filter-color-3);
+      }
+    }
+  }
+}
