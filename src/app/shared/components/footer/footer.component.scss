@@ -1,0 +1,33 @@
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-footer);
+  padding: 0 20px;
+  height: 20px;
+  transition: 500ms;
+
+  &:hover {
+    height: 40px;
+  }
+
+  .footer-left {
+  }
+
+  .footer-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .coppyright {
+      display: flex;
+
+      .name-company {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .footer-right {
+  }
+}
