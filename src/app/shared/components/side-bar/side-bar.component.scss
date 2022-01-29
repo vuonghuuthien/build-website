@@ -1,0 +1,38 @@
+.side-bar-wrapper {
+  height: 100%;
+  border-right: 1px solid var(--border);
+
+  .side-bar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5px 5px 20px;
+
+    .title {
+      font-weight: 700;
+      color: var(--gray-999999);
+    }
+
+    .btn-close {
+      img {
+        height: 20px;
+        width: 20px;
+        object-fit: contain;
+        filter: var(--filter-gray-cacaca);
+        cursor: pointer;
+      }
+
+      &:hover {
+        img {
+          filter: var(--filter-color-10);
+        }
+      }
+    }
+  }
+
+  .side-bar-body {
+  }
+
+  .side-bar-footer {
+  }
+}

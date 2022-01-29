@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   public logoName: string = 'APOLLO';
   public logoNameEl: any;
-  // public 
 
   constructor() {}
 
@@ -21,8 +20,7 @@ export class HeaderComponent implements OnInit {
     for (let i = 0; i < this.logoName.length; i++) {
       let spanEl: HTMLElement = document.createElement('div');
       spanEl.innerText = this.logoName[i];
-      if (i != this.logoName.length - 1)
-        spanEl.style.marginRight = '5px';
+      if (i != this.logoName.length - 1) spanEl.style.marginRight = '5px';
       this.logoNameEl?.appendChild(spanEl);
     }
   }
