@@ -20,6 +20,9 @@
   --filter-color-10: invert(29%) sepia(56%) saturate(5965%) hue-rotate(318deg)
     brightness(99%) contrast(95%);
   --gray-fbfbfb: #fbfbfb;
+  --gray-f9f9f9: #f9f9f9; // #f1f1f1 extend
+  --gray-f6f6f6: #f6f6f6; // #f1f1f1 extend
+  --gray-f4f4f4: #f4f4f4; // #f1f1f1 extend
   --gray-f1f1f1: #f1f1f1;
   --gray-e7e7e7: #e7e7e7;
   --gray-dedede: #dedede;
@@ -32,10 +35,16 @@
   --gray-999999: #999999;
   --gray-8f8f8f: #8f8f8f;
   --gray-858585: #858585;
+  --filter-gray-dedede: invert(99%) sepia(0%) saturate(3682%) hue-rotate(249deg)
+    brightness(113%) contrast(74%);
   --filter-gray-cacaca: invert(98%) sepia(7%) saturate(78%) hue-rotate(212deg)
     brightness(115%) contrast(83%);
+  --filter-gray-b6b6b6: invert(88%) sepia(0%) saturate(0%) hue-rotate(167deg)
+    brightness(86%) contrast(83%);
   --filter-gray-adadad: invert(82%) sepia(0%) saturate(818%) hue-rotate(146deg)
     brightness(88%) contrast(80%);
+  --filter-gray-a3a3a3: invert(59%) sepia(14%) saturate(0%) hue-rotate(172deg)
+    brightness(109%) contrast(88%);
 }
 
 html,
@@ -50,4 +59,23 @@ body {
 
 p {
   margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray-e7e7e7);
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gray-dedede);
 }

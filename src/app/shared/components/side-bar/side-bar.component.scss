@@ -15,8 +15,8 @@
 
     .btn-close {
       img {
-        height: 20px;
         width: 20px;
+        height: 20px;
         object-fit: contain;
         filter: var(--filter-gray-cacaca);
         cursor: pointer;
@@ -31,6 +31,151 @@
   }
 
   .side-bar-body {
+    $height-title: 35px;
+
+    .element {
+      position: relative;
+      min-height: $height-title;
+      cursor: pointer;
+
+      .title {
+        position: absolute;
+        height: $height-title;
+        left: 15px;
+        padding: 0 5px;
+        color: var(--gray-adadad);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+
+        &::after {
+          position: absolute;
+          content: "";
+          background: white;
+          width: 100%;
+          height: 2px;
+          left: 0;
+          top: calc($height-title/2);
+        }
+
+        img,
+        span {
+          z-index: 1;
+        }
+
+        img {
+          width: 11px;
+          height: 11px;
+          object-fit: contain;
+          margin-right: 10px;
+        }
+      }
+
+      .close-blocks {
+        position: absolute;
+        top: calc($height-title/2 - 5px);
+        right: 20px;
+        background: white;
+        display: none;
+        cursor: pointer;
+
+        img {
+          width: 15px;
+          height: 15px;
+          object-fit: contain;
+          filter: var(--filter-gray-b6b6b6);
+        }
+
+        &:hover {
+          img {
+            filter: var(--filter-gray-a3a3a3);
+          }
+        }
+      }
+
+      .blocks-wrapper {
+        padding: calc($height-title/2) 10px 15px 10px;
+
+        .blocks-cont {
+          max-height: 0;
+          overflow: hidden;
+          border: 2px solid transparent;
+          border-radius: 5px;
+          background: transparent;
+          transition: 200ms;
+
+          .blocks {
+            $padding-blocks: 10px;
+            $margin-block: 10px;
+            padding: calc($height-title/2) calc($padding-blocks - $margin-block)
+              calc($padding-blocks - $margin-block) $padding-blocks;
+            display: flex;
+
+            .block {
+              width: calc((100% - 3 * $padding-blocks) / 3);
+              background: var(--white);
+              margin-right: $margin-block;
+              margin-bottom: $margin-block;
+              box-shadow: var(--t-shadow-3);
+              border-radius: 3px;
+              position: relative;
+              cursor: pointer;
+              transition: transform .1s;
+
+              &:hover {
+                transition: transform .2s;
+                transform: scale(1.1);
+              }
+
+              &:before {
+                content: "";
+                display: block;
+                padding-top: 100%; /* initial ratio of 1:1*/
+              }
+
+              .block-body {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+
+      &:hover {
+        background: var(--gray-f9f9f9);
+
+        .title {
+          color: var(--gray-858585);
+        }
+      }
+
+      &.active {
+        cursor: default;
+        background: none;
+
+        .title {
+          color: var(--gray-858585);
+        }
+
+        .close-blocks {
+          display: block;
+          pointer-events: all;
+        }
+
+        .blocks-wrapper {
+          .blocks-cont {
+            max-height: 300px;
+            overflow-y: auto;
+            border-color: var(--color-1);
+            background: var(--gray-fbfbfb);
+          }
+        }
+      }
+    }
   }
 
   .side-bar-footer {

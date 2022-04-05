@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
 
+  openBlocks: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onOpenBlocks() {
+    this.openBlocks = true;
+  }
+
+  onCloseBlocks() {
+    this.openBlocks = false;
+    event?.stopPropagation();
+  }
 }

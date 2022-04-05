@@ -1,12 +1,67 @@
 <div class="side-bar-wrapper">
   <div class="side-bar-header">
-    <div class="title">
-      Elements
-    </div>
+    <div class="title">Elements</div>
     <div class="btn-close">
       <img src="assets/img/close.svg" alt="" />
     </div>
   </div>
-  <div class="side-bar-body"></div>
+  <div class="side-bar-body">
+    <div
+      class="element header"
+      [class.active]="openBlocks"
+      (click)="onOpenBlocks()"
+    >
+      <div class="title">
+        <img src="assets/img/elements/header.svg" alt="" />
+        <span>Header</span>
+      </div>
+      <div class="close-blocks" (click)="onCloseBlocks()">
+        <img src="assets/img/minus-square-regular.svg" alt="" />
+      </div>
+      <div class="blocks-wrapper">
+        <div class="blocks-cont">
+          <div class="blocks">
+            <div class="block">
+              <div class="block-body">
+                
+              </div>
+            </div>
+            <div class="block">
+              <div class="block-body">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="element sidebar">
+      <div class="title">
+        <img src="assets/img/elements/sidebar.svg" alt="" />
+        <span>Sidebar</span>
+      </div>
+      <div class="close-blocks">
+        <img src="assets/img/minus-square-regular.svg" alt="" />
+      </div>
+    </div>
+    <div class="element header">
+      <div class="title">
+        <img src="assets/img/elements/section.svg" alt="" />
+        <span>Section</span>
+      </div>
+      <div class="close-blocks">
+        <img src="assets/img/minus-square-regular.svg" alt="" />
+      </div>
+    </div>
+    <div class="element footer">
+      <div class="title">
+        <img src="assets/img/elements/footer.svg" alt="" />
+        <span>Footer</span>
+      </div>
+      <div class="close-blocks">
+        <img src="assets/img/minus-square-regular.svg" alt="" />
+      </div>
+    </div>
+  </div>
   <div class="side-bar-footer"></div>
 </div>
