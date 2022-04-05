@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class SideBarComponent implements OnInit {
 
   openBlocks: boolean = false;
+  listElHeader = [
+    "a", "b", "c"
+  ];
+  elHeaderSelected: any;
 
   constructor() { }
 
@@ -21,5 +25,13 @@ export class SideBarComponent implements OnInit {
   onCloseBlocks() {
     this.openBlocks = false;
     event?.stopPropagation();
+  }
+
+  selectElHeader(elHeader: any) {
+    if (this.elHeaderSelected == elHeader) {
+      this.elHeaderSelected = null;
+    } else {
+      this.elHeaderSelected = elHeader;
+    }
   }
 }

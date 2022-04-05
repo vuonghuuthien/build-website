@@ -7,7 +7,7 @@
   </div>
   <div class="side-bar-body">
     <div
-      class="element header"
+      class="element element-header"
       [class.active]="openBlocks"
       (click)="onOpenBlocks()"
     >
@@ -21,15 +21,13 @@
       <div class="blocks-wrapper">
         <div class="blocks-cont">
           <div class="blocks">
-            <div class="block">
-              <div class="block-body">
-                
-              </div>
-            </div>
-            <div class="block">
-              <div class="block-body">
-                
-              </div>
+            <div
+              class="block"
+              [class.active]="elHeader == this.elHeaderSelected"
+              *ngFor="let elHeader of this.listElHeader"
+              (click)="selectElHeader(elHeader)"
+            >
+              <div class="block-body anim-shine"></div>
             </div>
           </div>
         </div>
