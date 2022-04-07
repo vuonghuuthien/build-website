@@ -3,20 +3,33 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.component.html',
-  styleUrls: ['./side-bar.component.scss']
+  styleUrls: ['./side-bar.component.scss'],
 })
 export class SideBarComponent implements OnInit {
-
   openBlocks: boolean = false;
-  listElHeader = [
-    "a", "b", "c"
+  listElHeader_quick = [
+    {
+      id: 1,
+      img: 'assets/img/header/header-1.svg',
+    },
+    {
+      id: 2,
+      img: 'assets/img/header/header-2.svg',
+    },
+    {
+      id: 3,
+      img: 'assets/img/header/header-3.svg',
+    },
+    {
+      id: 4,
+      img: 'assets/img/header/header-4.svg',
+    }
   ];
   elHeaderSelected: any;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onOpenBlocks() {
     this.openBlocks = true;

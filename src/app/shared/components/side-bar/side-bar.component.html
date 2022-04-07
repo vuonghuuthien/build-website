@@ -24,10 +24,12 @@
             <div
               class="block"
               [class.active]="elHeader == this.elHeaderSelected"
-              *ngFor="let elHeader of this.listElHeader"
+              *ngFor="let elHeader of this.listElHeader_quick"
               (click)="selectElHeader(elHeader)"
             >
-              <div class="block-body anim-shine"></div>
+              <div class="block-body anim-shine">
+                <img [src]="elHeader.img" alt="" />
+              </div>
             </div>
           </div>
         </div>
